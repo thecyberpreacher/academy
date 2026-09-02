@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { WHATSAPP_LINK } from "@/lib/config";
-import logoMark from "@/assets/CPMainLogo.png.asset.json";
+import logoMark from "@/assets/CP-Icon.png.asset.json";
 
 const navLinks = [
   { label: "About", href: "#about" },
