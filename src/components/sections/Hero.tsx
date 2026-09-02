@@ -1,9 +1,19 @@
 import { Shield, MessageCircle, Mail } from "lucide-react";
 import { WHATSAPP_LINK, EMAIL_LINK } from "@/lib/config";
+import heroBg from "@/assets/CP_Logo_on_Laptop.png.asset.json";
 
 export function Hero() {
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden pt-20">
+      {/* Brand background */}
+      <img
+        src={heroBg.url}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover opacity-25"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
+
       {/* Geometric background elements */}
       <div className="absolute inset-0 geometric-grid opacity-30" />
       <div className="absolute -right-32 -top-32 h-[600px] w-[600px] rounded-full bg-gold/10 blur-[120px]" />
