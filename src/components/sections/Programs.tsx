@@ -1,4 +1,4 @@
-import { Shield, Lock, Search, Cpu, ArrowRight } from "lucide-react";
+import { Shield, Lock, Search, Cpu, ArrowRight, Star } from "lucide-react";
 import { WHATSAPP_LINK } from "@/lib/config";
 
 const programs = [
@@ -61,8 +61,19 @@ export function Programs() {
           {programs.map((program) => (
             <div
               key={program.title}
-              className="group relative flex flex-col rounded-2xl border border-border bg-carbon p-6 transition-all hover:-translate-y-1 hover:border-gold/50 hover:bg-carbon-light hover:shadow-[0_0_40px_-16px_var(--color-gold)]"
+              className={`group relative flex flex-col rounded-2xl border bg-carbon p-6 transition-all hover:-translate-y-1 hover:border-gold/50 hover:bg-carbon-light hover:shadow-[0_0_40px_-16px_var(--color-gold)] ${
+                program.topChoice
+                  ? "border-gold/60 shadow-[0_0_40px_-20px_var(--color-gold)]"
+                  : "border-border"
+              }`}
             >
+              {program.topChoice && (
+                <span className="absolute -top-3 left-6 inline-flex items-center gap-1 rounded-full bg-gold px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-primary-foreground">
+                  <Star className="h-3 w-3" />
+                  Top Choice
+                </span>
+              )}
+
               <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-gold/30 bg-carbon-light">
                 <program.icon className="h-6 w-6 text-gold" />
               </div>
