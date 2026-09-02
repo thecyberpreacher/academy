@@ -7,6 +7,7 @@ const programs = [
     title: "Cybersecurity Fundamentals",
     duration: "4 Weeks",
     level: "Foundational",
+    topChoice: false,
     description:
       "A fast-paced introduction to core cybersecurity concepts, threat landscapes, risk management, and defensive strategies for beginners and career switchers.",
   },
@@ -24,6 +25,7 @@ const programs = [
     title: "Digital Forensics",
     duration: "8 Weeks",
     level: "Intermediate",
+    topChoice: false,
     description:
       "Learn to investigate cyber incidents, preserve digital evidence, analyze artifacts, and build defensible forensic reports for law enforcement or enterprise teams.",
   },
@@ -32,6 +34,7 @@ const programs = [
     title: "AI Security",
     duration: "4 Weeks",
     level: "Advanced",
+    topChoice: false,
     description:
       "An advanced program covering adversarial machine learning, model security, AI risk governance, and protecting AI systems from real-world attacks.",
   },
