@@ -1,14 +1,22 @@
 import { MessageCircle, Mail, Clock, MapPin } from "lucide-react";
+import { motion, useReducedMotion } from "motion/react";
 import { WHATSAPP_LINK, EMAIL_LINK, CONTACT_EMAIL } from "@/lib/config";
+import { Reveal } from "@/components/motion/Reveal";
 
 export function ContactCTA() {
+  const reduce = useReducedMotion();
+
   return (
     <section id="contact" className="relative py-24 lg:py-32">
       <div className="absolute inset-0 geometric-grid opacity-20" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gold/5 to-transparent" />
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-b from-transparent via-gold/5 to-transparent"
+        animate={reduce ? {} : { opacity: [0.5, 1, 0.5] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
 
       <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div className="overflow-hidden rounded-3xl border border-gold/30 bg-carbon px-6 py-16 text-center sm:px-12 lg:py-20">
+        <Reveal className="relative overflow-hidden rounded-3xl border border-gold/30 bg-carbon px-6 py-16 text-center sm:px-12 lg:py-20">
           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
 
           <span className="font-display text-sm font-semibold uppercase tracking-wider text-gold">
@@ -23,22 +31,28 @@ export function ContactCTA() {
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a
+            <motion.a
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-base font-semibold text-primary-foreground transition-all hover:bg-gold-light hover:shadow-[0_0_32px_-8px_var(--color-gold)] sm:w-auto"
+              whileHover={reduce ? {} : { scale: 1.04, y: -2 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: "spring", stiffness: 380, damping: 20 }}
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-gold-light hover:shadow-[0_0_32px_-8px_var(--color-gold)] sm:w-auto"
             >
               <MessageCircle className="h-5 w-5" />
               Chat on WhatsApp
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href={EMAIL_LINK}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-gold/30 bg-carbon-light px-8 py-4 text-base font-semibold text-foreground transition-all hover:border-gold sm:w-auto"
+              whileHover={reduce ? {} : { scale: 1.04, y: -2 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: "spring", stiffness: 380, damping: 20 }}
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-gold/30 bg-carbon-light px-8 py-4 text-base font-semibold text-foreground transition-colors hover:border-gold sm:w-auto"
             >
               <Mail className="h-5 w-5 text-gold" />
               {CONTACT_EMAIL}
-            </a>
+            </motion.a>
           </div>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-6 text-sm text-muted-foreground sm:flex-row">
@@ -51,7 +65,7 @@ export function ContactCTA() {
               <span>100% Virtual</span>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

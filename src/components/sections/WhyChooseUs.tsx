@@ -1,4 +1,5 @@
 import { Award, Monitor, Calendar, Users, BookOpen, FlaskConical } from "lucide-react";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 
 const reasons = [
   {
@@ -43,7 +44,7 @@ export function WhyChooseUs() {
   return (
     <section id="why-us" className="relative py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
+        <Reveal className="mx-auto max-w-3xl text-center">
           <span className="font-display text-sm font-semibold uppercase tracking-wider text-gold">
             Why Choose Us
           </span>
@@ -54,13 +55,13 @@ export function WhyChooseUs() {
             We don't just teach theory. We build practitioners who can defend
             systems, investigate breaches, and secure AI.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <Stagger className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {reasons.map((reason) => (
-            <div
+            <StaggerItem
               key={reason.title}
-              className="rounded-2xl border border-border bg-carbon p-6 transition-all hover:border-gold/30 hover:bg-carbon-light"
+              className="rounded-2xl border border-border bg-carbon p-6 transition-colors hover:border-gold/30 hover:bg-carbon-light"
             >
               <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-gold/30 bg-carbon-light">
                 <reason.icon className="h-5 w-5 text-gold" />
@@ -71,9 +72,9 @@ export function WhyChooseUs() {
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {reason.description}
               </p>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );
