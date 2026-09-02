@@ -1,5 +1,7 @@
 import { Shield, Lock, Search, Cpu, ArrowRight, Star } from "lucide-react";
+import { motion } from "motion/react";
 import { WHATSAPP_LINK } from "@/lib/config";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 
 const programs = [
   {
@@ -47,7 +49,7 @@ export function Programs() {
       <div className="absolute inset-y-0 right-0 w-px bg-gradient-to-b from-transparent via-gold/20 to-transparent" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
+        <Reveal className="mx-auto max-w-3xl text-center">
           <span className="font-display text-sm font-semibold uppercase tracking-wider text-gold">
             Training Programs
           </span>
@@ -58,28 +60,36 @@ export function Programs() {
             Choose the path that matches your goals. All programs run on weekends
             with 8 hours of intensive training per week.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <Stagger className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {programs.map((program) => (
-            <div
+            <StaggerItem
               key={program.title}
-              className={`group relative flex flex-col rounded-2xl border bg-carbon p-6 transition-all hover:-translate-y-1 hover:border-gold/50 hover:bg-carbon-light hover:shadow-[0_0_40px_-16px_var(--color-gold)] ${
+              className={`group relative flex h-full flex-col rounded-2xl border bg-carbon p-6 transition-colors hover:border-gold/50 hover:bg-carbon-light hover:shadow-[0_0_40px_-16px_var(--color-gold)] ${
                 program.topChoice
                   ? "border-gold/60 shadow-[0_0_40px_-20px_var(--color-gold)]"
                   : "border-border"
               }`}
             >
               {program.topChoice && (
-                <span className="absolute -top-3 left-6 inline-flex items-center gap-1 rounded-full bg-gold px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-primary-foreground">
+                <motion.span
+                  className="absolute -top-3 left-6 inline-flex items-center gap-1 rounded-full bg-gold px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-primary-foreground"
+                  animate={{ y: [0, -3, 0] }}
+                  transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
+                >
                   <Star className="h-3 w-3" />
                   Top Choice
-                </span>
+                </motion.span>
               )}
 
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-gold/30 bg-carbon-light">
+              <motion.div
+                className="flex h-12 w-12 items-center justify-center rounded-xl border border-gold/30 bg-carbon-light"
+                whileHover={{ rotate: 6, scale: 1.08 }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
+              >
                 <program.icon className="h-6 w-6 text-gold" />
-              </div>
+              </motion.div>
 
               <h3 className="mt-6 font-display text-xl font-semibold text-foreground">
                 {program.title}
@@ -107,9 +117,9 @@ export function Programs() {
                 Enquire Now
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

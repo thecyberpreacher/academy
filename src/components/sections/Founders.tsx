@@ -1,4 +1,5 @@
-import { Award, Shield } from "lucide-react";
+import { Award } from "lucide-react";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 
 const founders = [
   {
@@ -19,7 +20,7 @@ export function Founders() {
   return (
     <section id="founders" className="relative py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
+        <Reveal className="mx-auto max-w-3xl text-center">
           <span className="font-display text-sm font-semibold uppercase tracking-wider text-gold">
             Leadership
           </span>
@@ -30,13 +31,13 @@ export function Founders() {
             CyberPreacher Academy was founded by professionals committed to
             raising the bar in cybersecurity education.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:max-w-4xl lg:mx-auto">
+        <Stagger className="mt-16 grid gap-8 sm:grid-cols-2 lg:max-w-4xl lg:mx-auto">
           {founders.map((founder) => (
-            <div
+            <StaggerItem
               key={founder.name}
-              className="relative overflow-hidden rounded-2xl border border-border bg-carbon p-8 text-center transition-all hover:border-gold/50"
+              className="relative overflow-hidden rounded-2xl border border-border bg-carbon p-8 text-center transition-colors hover:border-gold/50"
             >
               <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent" />
 
@@ -71,9 +72,9 @@ export function Founders() {
               <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
                 {founder.bio}
               </p>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );
