@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { WHATSAPP_LINK } from "@/lib/config";
+import logoMark from "@/assets/CPMainLogo.png.asset.json";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -30,10 +31,12 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-gold/30 bg-carbon">
-            <span className="font-display text-lg font-bold text-gold">CP</span>
-          </div>
+        <Link to="/" className="flex items-center gap-2.5">
+          <img
+            src={logoMark.url}
+            alt="CyberPreacher Academy logo"
+            className="h-9 w-9 object-contain"
+          />
           <span className="font-display text-lg font-semibold tracking-tight text-foreground sm:text-xl">
             CyberPreacher <span className="text-gold">Academy</span>
           </span>
