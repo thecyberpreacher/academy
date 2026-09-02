@@ -15,6 +15,7 @@ const programs = [
     title: "Ethical Hacking & Penetration Testing",
     duration: "12 Weeks",
     level: "Advanced",
+    topChoice: true,
     description:
       "Intensive hands-on training in reconnaissance, exploitation, post-exploitation, and reporting. Built for aspiring penetration testers and red-team operators.",
   },
