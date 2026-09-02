@@ -11,7 +11,7 @@ export function ContactCTA() {
       <div className="absolute inset-0 geometric-grid opacity-20" />
       <motion.div
         className="absolute inset-0 bg-gradient-to-b from-transparent via-gold/5 to-transparent"
-        animate={reduce ? undefined : { opacity: [0.5, 1, 0.5] }}
+        animate={reduce ? {} : { opacity: [0.5, 1, 0.5] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
 
@@ -35,7 +35,7 @@ export function ContactCTA() {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={reduce ? undefined : { scale: 1.04, y: -2 }}
+              whileHover={reduce ? {} : { scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 380, damping: 20 }}
               className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-gold-light hover:shadow-[0_0_32px_-8px_var(--color-gold)] sm:w-auto"
@@ -45,7 +45,7 @@ export function ContactCTA() {
             </motion.a>
             <motion.a
               href={EMAIL_LINK}
-              whileHover={reduce ? undefined : { scale: 1.04, y: -2 }}
+              whileHover={reduce ? {} : { scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 380, damping: 20 }}
               className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-gold/30 bg-carbon-light px-8 py-4 text-base font-semibold text-foreground transition-colors hover:border-gold sm:w-auto"

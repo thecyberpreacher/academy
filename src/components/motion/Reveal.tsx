@@ -75,7 +75,7 @@ export function StaggerItem({
           transition: { duration: 0.65, ease: EASE },
         },
       }}
-      whileHover={reduce ? undefined : { y: -6 }}
+      whileHover={reduce ? {} : { y: -6 }}
       transition={{ type: "spring", stiffness: 260, damping: 22 }}
     >
       {children}

@@ -41,7 +41,7 @@ export function Header() {
             src={logoMark.url}
             alt="CyberPreacher Academy logo"
             className="h-9 w-9 object-contain"
-            whileHover={reduce ? undefined : { rotate: 12, scale: 1.1 }}
+            whileHover={reduce ? {} : { rotate: 12, scale: 1.1 }}
             transition={{ type: "spring", stiffness: 300, damping: 12 }}
           />
           <span className="font-display text-lg font-semibold tracking-tight text-foreground sm:text-xl">
@@ -67,7 +67,7 @@ export function Header() {
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={reduce ? undefined : { scale: 1.05, y: -1 }}
+            whileHover={reduce ? {} : { scale: 1.05, y: -1 }}
             whileTap={{ scale: 0.96 }}
             transition={{ type: "spring", stiffness: 380, damping: 20 }}
             className="inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-gold-light hover:shadow-[0_0_24px_-6px_var(--color-gold)]"

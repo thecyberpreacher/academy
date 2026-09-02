@@ -36,12 +36,12 @@ export function Hero() {
       <div className="absolute inset-0 geometric-grid opacity-30" />
       <motion.div
         className="absolute -right-32 -top-32 h-[600px] w-[600px] rounded-full bg-gold/10 blur-[120px]"
-        animate={reduce ? undefined : { scale: [1, 1.15, 1], opacity: [0.6, 1, 0.6] }}
+        animate={reduce ? {} : { scale: [1, 1.15, 1], opacity: [0.6, 1, 0.6] }}
         transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
         className="absolute -left-32 bottom-0 h-[500px] w-[500px] rounded-full bg-gold/5 blur-[100px]"
-        animate={reduce ? undefined : { scale: [1.1, 1, 1.1], opacity: [0.5, 0.9, 0.5] }}
+        animate={reduce ? {} : { scale: [1.1, 1, 1.1], opacity: [0.5, 0.9, 0.5] }}
         transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
       />
 
@@ -81,7 +81,7 @@ export function Hero() {
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-gold/30 bg-carbon px-4 py-1.5"
           >
             <motion.span
-              animate={reduce ? undefined : { opacity: [1, 0.35, 1] }}
+              animate={reduce ? {} : { opacity: [1, 0.35, 1] }}
               transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
               className="inline-flex"
             >
@@ -115,7 +115,7 @@ export function Hero() {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={reduce ? undefined : { scale: 1.04, y: -2 }}
+              whileHover={reduce ? {} : { scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 380, damping: 20 }}
               className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-gold-light hover:shadow-[0_0_32px_-8px_var(--color-gold)]"
@@ -125,7 +125,7 @@ export function Hero() {
             </motion.a>
             <motion.a
               href={EMAIL_LINK}
-              whileHover={reduce ? undefined : { scale: 1.04, y: -2 }}
+              whileHover={reduce ? {} : { scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 380, damping: 20 }}
               className="inline-flex items-center justify-center gap-2 rounded-full border border-gold/30 bg-carbon px-8 py-4 text-base font-semibold text-foreground transition-colors hover:border-gold hover:bg-carbon-light"
@@ -143,7 +143,7 @@ export function Hero() {
               <div key={label} className="flex items-center gap-2">
                 <motion.div
                   className="h-2 w-2 rounded-full bg-gold"
-                  animate={reduce ? undefined : { scale: [1, 1.6, 1], opacity: [1, 0.4, 1] }}
+                  animate={reduce ? {} : { scale: [1, 1.6, 1], opacity: [1, 0.4, 1] }}
                   transition={{
                     duration: 2,
                     repeat: Infinity,
