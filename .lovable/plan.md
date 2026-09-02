@@ -39,8 +39,8 @@ Build a polished single-page landing site for CyberPreacher Academy that communi
    - Icon + short text grid
 
 6. **Founders**
-   - Steven Osonuga (Founder) and Praise Awowoyin (Co-Founder)
-   - Photo placeholders, brief bios if provided; otherwise names + roles
+   - Steven Osonuga (Founder, CISSP, CEH) and Praise Awowoyin (Co-Founder)
+   - Photo placeholders, brief bios if provided; otherwise names, roles, and credentials
 
 7. **Contact / Final CTA**
    - WhatsApp button (primary)
