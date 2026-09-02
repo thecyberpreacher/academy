@@ -22,8 +22,8 @@ Build a polished single-page landing site for CyberPreacher Academy that communi
    - Geometric/circuit-like decorative background elements in gold on black
 
 3. **About**
-   - Founded 2024 by Steven Osonuga, co-founded by Praise Awowoyin
-   - Mission statement about building great cybersecurity professionals
+   - Founded 2024 by Steven Osonuga (CISSP, CEH), co-founded by Praise Awowoyin
+   - Mission statement: "Setting the global standard for cybersecurity excellence."
    - Stats: 4 expert-led programs, virtual, weekend format
 
 4. **Training Programs**
@@ -39,8 +39,8 @@ Build a polished single-page landing site for CyberPreacher Academy that communi
    - Icon + short text grid
 
 6. **Founders**
-   - Steven Osonuga (Founder) and Praise Awowoyin (Co-Founder)
-   - Photo placeholders, brief bios if provided; otherwise names + roles
+   - Steven Osonuga (Founder, CISSP, CEH) and Praise Awowoyin (Co-Founder)
+   - Photo placeholders, brief bios if provided; otherwise names, roles, and credentials
 
 7. **Contact / Final CTA**
    - WhatsApp button (primary)
