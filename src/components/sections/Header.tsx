@@ -3,7 +3,6 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { WHATSAPP_LINK } from "@/lib/config";
-import logoMark from "@/assets/CP-Icon.png.asset.json";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -38,7 +37,7 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2.5">
           <motion.img
-            src={logoMark.url}
+            src="/academy/images/CP-Icon.png"
             alt="CyberPreacher Academy logo"
             className="h-9 w-9 object-contain"
             whileHover={reduce ? {} : { rotate: 12, scale: 1.1 }}

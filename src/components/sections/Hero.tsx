@@ -1,7 +1,6 @@
 import { Shield, MessageCircle, Mail } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import { WHATSAPP_LINK, EMAIL_LINK } from "@/lib/config";
-import heroBg from "@/assets/CP_Logo_on_Laptop.png.asset.json";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -22,7 +21,7 @@ export function Hero() {
     <section className="relative flex min-h-screen items-center overflow-hidden pt-20">
       {/* Brand background */}
       <motion.img
-        src={heroBg.url}
+        src="/academy/images/CP_Logo_on_Laptop.png"
         alt=""
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover opacity-25"
